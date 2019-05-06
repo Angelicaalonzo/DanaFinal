@@ -34,7 +34,7 @@ namespace DanaFinalProject
             });
 
             services.AddDbContext<BookDbContext>(options =>
-        options.UseSqlite(Configuration.GetConnectionString("BookContext")));
+                options.UseSqlite(Configuration.GetConnectionString("BookContext")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

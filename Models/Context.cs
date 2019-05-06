@@ -10,6 +10,9 @@ namespace DanaFinalProject.Models
         }
 
         public DbSet<DanaFinalProject.Models.Book> Book { get; set; }
+        public DbSet <DanaFinalProject.Models.Author> Author {get; set;}
+        public DbSet <DanaFinalProject.Models.Review> Review {get; set;}
+
 
     }
 }

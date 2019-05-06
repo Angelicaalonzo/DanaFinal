@@ -28,8 +28,10 @@
 /Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/DanaFinalProject.dll
 /Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/DanaFinalProject.pdb
 /Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/DanaFinalProject.csproj.CopyComplete
-/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/PagesBooks/Create.g.cshtml.cs
-/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/PagesBooks/Delete.g.cshtml.cs
-/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/PagesBooks/Details.g.cshtml.cs
-/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/PagesBooks/Edit.g.cshtml.cs
-/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/PagesBooks/Index.g.cshtml.cs
+/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/Create.g.cshtml.cs
+/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/Delete.g.cshtml.cs
+/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/DeleteReview.g.cshtml.cs
+/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/Details.g.cshtml.cs
+/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/Edit.g.cshtml.cs
+/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/Index.g.cshtml.cs
+/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/Review.g.cshtml.cs

@@ -27,6 +27,9 @@ namespace DanaFinalProject.Models
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
       
-        
+        public string Rating { get; set; }
+
+        public List<Review> Reviews {get; set;} // Navigation property. Each movie can have many reviews
+        public Author Author {get; set;}
     }
 }
