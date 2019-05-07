@@ -14,7 +14,7 @@ namespace DanaFinalProject.Models
         [Required]
         public int Score {get; set;}
 
-        [Display(Name = "Movie")]
+        [Display(Name = "Book")]
         [Required]
         public int BookId {get; set;} // Fk
         

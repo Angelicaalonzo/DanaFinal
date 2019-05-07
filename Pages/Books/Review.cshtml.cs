@@ -31,7 +31,7 @@ namespace DanaFinalProject.Pages.Books
 
         public IActionResult OnGet(int? id)
         {
-            // Get a list of movies.
+            // Get a list of books.
             Books = new SelectList(_context.Book.ToList(), "ID", "Title", id);
             return Page();
         }

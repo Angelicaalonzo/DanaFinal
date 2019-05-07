@@ -15,7 +15,7 @@ namespace DanaFinalProject.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<BookDbContext>>()))
             {
-                // Look for any movies.
+                // Look for any books.
                 if (context.Book.Any())
                 {
                     return;   // DB has been seeded
