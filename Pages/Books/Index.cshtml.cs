@@ -87,20 +87,20 @@ namespace DanaFinalProject.Pages.Books
             //     select m).Include("Reviews");
             
             // Use .Include() to bring in the reviews
-            var movies = _context.Book.Include(m => m.Reviews).Select(m => m);
+            var query = _context.Book.Include(m => m.Reviews).Select(m => m);
             
             if (!string.IsNullOrEmpty(SearchString))
             {
-                movies = movies.Where(s => s.Title.Contains(SearchString));
+                query = query.Where(s => s.Title.Contains(SearchString));
             }
             
             if (!string.IsNullOrEmpty(BookGenre))
             {
-                movies = movies.Where(x => x.Genre == BookGenre);
+                query = query.Where(x => x.Genre == BookGenre);
             }
 
             // Calculate total number of records and how many pages that takes
-            TotalCount = movies.Count();
+            TotalCount = query.Count();
             TotalPages = (int)Math.Ceiling(TotalCount / (double)PageSize);
 
             Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
@@ -111,22 +111,22 @@ namespace DanaFinalProject.Pages.Books
             {
                 case "title_desc":
                     _logger.LogInformation("Sorting by Title descending");
-                    movies = movies.OrderByDescending(m => m.Title);
+                    query = query.OrderByDescending(m => m.Title);
                     TitleSort = "title_asc";
                     break;
                 case "title_asc":
                     _logger.LogInformation("Sorting by Title ascending");
-                    movies = movies.OrderBy(m => m.Title);
+                    query = query.OrderBy(m => m.Title);
                     TitleSort = "title_desc";
                     break;
                 case "date_desc":
                     _logger.LogInformation("Sorting by Release Date descending");
-                    movies = movies.OrderByDescending(m => m.ReleaseDate);
+                    query = query.OrderByDescending(m => m.ReleaseDate);
                     DateSort = "date_asc";
                     break;
                 case "date_asc":
                     _logger.LogInformation("Sorting by Release Date ascending");
-                    movies = movies.OrderBy(m => m.ReleaseDate);
+                    query = query.OrderBy(m => m.ReleaseDate);
                     DateSort = "date_desc";
                     break;
                 default:
@@ -136,7 +136,8 @@ namespace DanaFinalProject.Pages.Books
 
             // Pick the movies for paging. Skip() to current page and then Take the right
             // number of movies
-            Book = await movies.Skip((PageNum - 1) * PageSize).Take(PageSize).ToListAsync();
+            Book = query.ToList();
+            
         }
     }
 }

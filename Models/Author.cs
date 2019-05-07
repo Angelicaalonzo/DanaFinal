@@ -19,6 +19,8 @@ namespace DanaFinalProject.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
+        public int BookID {get;set;} //FK
+
         public List<Book> Books {get; set;} // Navigation property. Each Author can have many Books
 
         

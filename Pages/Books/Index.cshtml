@@ -43,9 +43,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Book[0].Price)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Book[0].Rating)
-            </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.Book[0].Reviews)
             </th>
@@ -59,6 +57,9 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.ReleaseDate)
             </td>
             <td>
@@ -67,12 +68,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
+            
             <td>
                 @{
-                    // For each movie, calculate the Average review score and display it
+                    // For each Book, calculate the Average review score and display it
                     // Or display N/A. @:text will display text in HTML. or you can use a <span> tag
                     if (item.Reviews.Count > 0) {
                         double avg = item.Reviews.Average(r => r.Score);

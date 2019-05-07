@@ -16,7 +16,7 @@ namespace DanaFinalProject.Models
 
         [Display(Name = "Movie")]
         [Required]
-        public int BookId {get; set;} // Foreign Key
+        public int BookId {get; set;} // Fk
         
         public Book Book {get; set;} // Navigation Property. Each Review goes back to ONE Movie
     }
