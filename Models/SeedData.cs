@@ -297,38 +297,74 @@ namespace DanaFinalProject.Models
             },
 
             new Book
-                                {
-                                    Title = "To Kill a Mockingbird",
-                                    ReleaseDate = DateTime.Parse("1960-11-01"),
-                                    Genre = "Classic",
-                                    Price = 20.99M,
-                                    Reviews = new List<Review> {
-                                        new Review {Score = 5},
-                                        new Review {Score = 5}
-                                    },
-                        Author = new Author{
-                                    FirstName = "Harper ",
-                                        LastName = "Lee"
-                        }
+                    {
+                        Title = "To Kill a Mockingbird",
+                        ReleaseDate = DateTime.Parse("1960-11-01"),
+                        Genre = "Classic",
+                        Price = 20.99M,
+                        Reviews = new List<Review> {
+                            new Review {Score = 5},
+                            new Review {Score = 5}
+                        },
+            Author = new Author{
+                        FirstName = "Harper ",
+                            LastName = "Lee"
+            }
 
             },
 
             new Book
-                                {
-                                    Title = "Of Mice and Men",
-                                    ReleaseDate = DateTime.Parse("1937-12-01"),
-                                    Genre = "Classic",
-                                    Price = 20.99M,
-                                    Reviews = new List<Review> {
-                                        new Review {Score = 4},
-                                        new Review {Score = 5}
-                                    },
-                        Author = new Author{
-                                    FirstName = "John ",
-                                        LastName = "Steinbeck"
-                        }
+            {
+                Title = "Of Mice and Men",
+                ReleaseDate = DateTime.Parse("1937-12-01"),
+                Genre = "Classic",
+                Price = 20.99M,
+                Reviews = new List<Review> {
+                    new Review {Score = 4},
+                    new Review {Score = 5}
+                },
+                Author = new Author{
+                    FirstName = "John ",
+                    LastName = "Steinbeck"
+                }
 
-                        }
+            },
+
+            new Book
+            {
+                Title = "IT",
+                ReleaseDate = DateTime.Parse("1986-12-01"),
+                Genre = "Horror",
+                Price = 20.99M,
+                Reviews = new List<Review> {
+                    new Review {Score = 4},
+                    new Review {Score = 5}
+                },
+                Author = new Author{
+                    FirstName = "Stephen ",
+                    LastName = "King"
+                }
+
+            },
+
+            new Book
+            {
+                Title = "Pet Semetary",
+                ReleaseDate = DateTime.Parse("1983-12-01"),
+                Genre = "Classic",
+                Price = 20.99M,
+                Reviews = new List<Review> {
+                    new Review {Score = 4},
+                    new Review {Score = 5}
+                },
+                Author = new Author{
+                    FirstName = "Stephen",
+                    LastName = "King"
+                }
+
+            }
+
+
                 );
                 context.SaveChanges();
             }

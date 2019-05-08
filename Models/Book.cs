@@ -29,6 +29,8 @@ namespace DanaFinalProject.Models
       
 
         public List<Review> Reviews {get; set;} // Navigation property. Each movie can have many reviews
-        public Author Author {get; set;}
+        public Author Author {get; set;} //FK
+     
+    
     }
 }

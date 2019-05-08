@@ -35,3 +35,4 @@
 /Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/Edit.g.cshtml.cs
 /Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/Index.g.cshtml.cs
 /Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/Review.g.cshtml.cs
+/Users/angelicaalonzo/Desktop/DanaFinalProject/obj/Debug/netcoreapp2.2/Razor/Pages/Books/Contact.g.cshtml.cs
