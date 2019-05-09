@@ -34,24 +34,21 @@ namespace DanaFinalProject.Pages
         [EmailAddress(ErrorMessage = "The E-Mail field is not valid.")]
         public string Email {get; set;}
 
-        [BindProperty]
-        [Display(Name = "Message")]
-        public string Message {get; set;}
+       
 
         public ContactModel(ILogger<ContactModel> log)
         {
             _log = log;
         }
-
-         public void OnPost()
+        public void OnPost()
         {
-          _log.LogInformation($"IndexModel OnGet( {FirstName} ) Called",FirstName);
+             _log.LogWarning("OnPost() Called");
         }
-
         public void OnGet()
         {
-            
+
         }
+        
 
        
     }
