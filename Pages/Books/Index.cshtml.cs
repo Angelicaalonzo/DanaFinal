@@ -23,6 +23,7 @@ namespace DanaFinalProject.Pages.Books
         }
 
         public IList<Book> Book { get;set; }
+       
         
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
@@ -71,22 +72,6 @@ namespace DanaFinalProject.Pages.Books
                                             orderby m.Genre
                                             select m.Genre;
 
-            //var movies = from m in _context.Book
-            //            select m;
-            // var movies = _context.Book.Include(m => m.Reviews).Select(m => new {
-            //     ID = m.ID,
-            //     Title = m.Title,
-            //     ReleaseDate = m.ReleaseDate,
-            //     Genre = m.Genre,
-            //     Price = m.Price,
-            //     Rating = m.Rating,
-            //     Review = m.Reviews.Average(r => r.Score)            
-            // });
-            // IQueryable<Book> movies = _context.Book.Include(m => m.Reviews);
-            // var movies = (from m in _context.Book
-            //     select m).Include("Reviews");
-            
-            // Use .Include() to bring in the reviews
             var query = _context.Book.Include(m => m.Reviews).Select(m => m);
             
             if (!string.IsNullOrEmpty(SearchString))
@@ -134,9 +119,10 @@ namespace DanaFinalProject.Pages.Books
                     break;
             }
 
-            // Pick the movies for paging. Skip() to current page and then Take the right
-            // number of movies
+            
             Book = query.ToList();
+            Book = await query.Skip((PageNum-1)*PageSize).Take(PageSize).ToListAsync();
+            
             
         }
     }
